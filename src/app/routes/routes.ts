@@ -2,6 +2,7 @@ import { Routes } from '@angular/router';
 import { LayoutComponent } from 'src/app/layouts/layout.component';
 import { AboutComponent } from 'src/app/pages/about/about.component';
 import { HomeComponent } from 'src/app/pages/home/home.component';
+import { AuthenticationGuard } from '../_guards/auth.guard';
 
 export const routes: Routes = [
   {
@@ -10,7 +11,11 @@ export const routes: Routes = [
     children: [
       { path: '', redirectTo: 'home', pathMatch: 'full' },
       { path: 'home', component: HomeComponent },
-      { path: 'about', component: AboutComponent },
+      {
+        path: 'about',
+        component: AboutComponent,
+        canActivate: [AuthenticationGuard],
+      },
     ],
   },
 
