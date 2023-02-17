@@ -1,10 +1,12 @@
-
 .navbar input[type="checkbox"],
 .navbar .hamburger-lines{
     display: none;
 }
 
 .navbar{
+    position: sticky;
+    top: 0;
+    background: white;
     width: 100%;
     color: #000;
     z-index: 100;

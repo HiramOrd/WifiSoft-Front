@@ -1,14 +1,12 @@
 .contact__content{
     display: flex;
-    align-items: center;
     justify-content: center;
     padding: 5rem 2rem;
-    gap: 2rem;
+    gap: 4rem;
     .left {
         display: flex;
         flex-direction: column;
         width: 50%;
-        padding: 2rem;
         .contact__title {
             font-size: 3rem;
             font-weight: 700;
@@ -36,7 +34,19 @@
             form{
                 display: flex;
                 flex-direction: column;
+                width: 500px;
+                padding: 2rem;
                 gap: 1rem;
+                border: 1px solid #CBCBD6;
+                border-radius: 12px;
+                box-shadow: 12px 26px 33px rgba(0,0,0,0.05);
+                .contact__span{
+                    font-size: 1.3rem;
+                    font-weight: 700;
+                    color: #414141;
+                    margin-bottom: 1rem;
+                    margin-top: 1rem;
+                }
             }
             .contact__form__group{
                 display: flex;
@@ -86,7 +96,22 @@
     .right {
         width: 50%;
         .contact__social {
-            text-align: center;
+            text-align: left;
+            .contact__title {
+                padding: .5rem;
+                font-size: 3rem;
+                font-weight: 700;
+                margin-bottom: .2rem;
+            }
+    
+            .contact__text {
+                margin-top: .2rem;
+                font-size: 1rem;
+                font-weight: 400;
+                margin-bottom: 2rem;
+                max-width: 500px;
+                padding: 1rem;
+            }
         }
     }
 }
@@ -104,11 +129,12 @@
     width: 300px;
     height: 300px;
     background: #ffffff;
-    margin: 0 1rem;
+    margin: 0 .5rem;
     cursor: pointer;
     transition: all 0.3s ease;
     border-radius: 1rem;
     border: 1px solid #CBCBD6;
+    box-shadow: 12px 26px 33px rgba(0,0,0,0.05);
     &:hover{
         background: #fafafa;
     }
