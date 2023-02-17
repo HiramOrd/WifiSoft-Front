@@ -8,9 +8,12 @@ import { PacksComponent } from './components/packs/packs.component';
 import { MenubarModule } from 'primeng/menubar';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { InputTextModule } from 'primeng/inputtext';
+import { AboutUsComponent } from './components/about/about.component';
+import { ContactComponent } from './components/contact/contact.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
-  declarations: [HomeComponent, HeaderComponent, HeroComponent, PacksComponent],
+  declarations: [HomeComponent, HeaderComponent, HeroComponent, PacksComponent, AboutUsComponent, ContactComponent, FooterComponent],
   imports: [
     CommonModule,
 

@@ -147,6 +147,7 @@
 
     .navbar-container input[type="checkbox"]:checked ~ .menu-items{
         transform: translateX(0);
+        overflow: hidden;
     }
 
     .navbar-container input[type="checkbox"]:checked ~ .hamburger-lines .line1{
