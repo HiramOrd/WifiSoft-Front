@@ -48,3 +48,17 @@
         }
     }
 }
+
+@media screen and (max-width: 768px) {
+    .packs__items {
+        grid-template-columns: repeat(1,1fr);
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .packs__item{
+        width: 250px;
+        margin: .5rem!important;
+        margin: auto;
+    }
+}

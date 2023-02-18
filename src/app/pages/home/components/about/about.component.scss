@@ -65,3 +65,21 @@
         }
     }
 }
+
+
+@media screen and (max-width:768px) {
+    .about__content{
+        flex-direction: column;
+        gap: 5rem;
+    }
+    .left{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        gap: .2rem;
+    }
+    .about__image img{
+        width: 100%!important;
+        height: auto!important;
+    }
+}
