@@ -7,8 +7,6 @@ import { LandingService } from 'src/app/services/landing.service';
   styleUrls: ['./packs.component.scss']
 })
 export class PacksComponent implements OnInit {
-  @Input() title: String = '';
-  @Input() price: String = '';
   datos: any 
 
   constructor(private landingService: LandingService) { }
