@@ -14,9 +14,11 @@ export class LandingService {
     const observable = this.http.get<GenericText>(API.SERVER + API.HEADER);
     return await firstValueFrom(observable);
   }
-  
-  async getPackages(): Promise<GenericNumber> {
-    const observable = this.http.get<GenericNumber>(API.SERVER + API.PACKAGES);
+
+  async getPackages(): Promise<GenericNumber[]> {
+    const observable = this.http.get<GenericNumber[]>(
+      API.SERVER + API.PACKAGES
+    );
     return await firstValueFrom(observable);
   }
   async getAbout(): Promise<GenericText> {
