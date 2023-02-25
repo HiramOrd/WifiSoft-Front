@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { LandingService } from 'src/app/services/landing.service';
 
 @Component({
   selector: 'app-packs',
@@ -6,10 +7,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./packs.component.scss']
 })
 export class PacksComponent implements OnInit {
+  @Input() title: String = '';
+  @Input() price: String = '';
+  datos: any 
 
-  constructor() { }
+  constructor(private landingService: LandingService) { }
 
-  ngOnInit(): void {
+  ngOnInit(){
+      this.landingService.getPackages().then(data => {
+        this.datos = data;
+        console.log(data);
+      });
   }
-
 }

@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { API } from '../environment/api';
-import { GenericText } from '../models/generic';
+import { GenericNumber, GenericText } from '../models/generic';
 import { firstValueFrom } from 'rxjs';
 
 @Injectable({
@@ -15,11 +15,8 @@ export class LandingService {
     return await firstValueFrom(observable);
   }
   
-  async getPackages(): Promise<GenericText> {
-    //TODO: Asi es como el backend tiene la llamada
-    const observable = this.http.get<GenericText>(API.SERVER);
-    //TODO: Asi es como deberia quedar
-    //const observable = this.http.get<GenericText>(API.SERVER + API.PACKAGES);
+  async getPackages(): Promise<GenericNumber> {
+    const observable = this.http.get<GenericNumber>(API.SERVER + API.PACKAGES);
     return await firstValueFrom(observable);
   }
   async getAbout(): Promise<GenericText> {

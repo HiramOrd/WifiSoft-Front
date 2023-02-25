@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { GenericText } from 'src/app/models/generic';
+import { GenericText, GenericNumber } from 'src/app/models/generic';
 import { LandingService } from 'src/app/services/landing.service';
 
 @Component({
@@ -9,14 +9,14 @@ import { LandingService } from 'src/app/services/landing.service';
 })
 export class HomeComponent implements OnInit {
   header: GenericText | undefined;
-  //set packages like array
-  packages: GenericText |  undefined;
+  packages: GenericNumber |  undefined;
   about: GenericText | undefined;
 
   constructor(private landingService: LandingService) {}
 
   ngOnInit(): void {
     this.getHeader();
+    this.getPackages();
     this.getAbout();
   }
 
