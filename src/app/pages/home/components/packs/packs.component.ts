@@ -16,7 +16,6 @@ export class PacksComponent implements OnInit {
   ngOnInit(){
       this.landingService.getPackages().then(data => {
         this.datos = data;
-        console.log(data);
       });
   }
 }
