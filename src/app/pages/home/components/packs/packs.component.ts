@@ -1,19 +1,16 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { GenericNumber } from 'src/app/models/generic';
 import { LandingService } from 'src/app/services/landing.service';
 
 @Component({
   selector: 'app-packs',
   templateUrl: './packs.component.html',
-  styleUrls: ['./packs.component.scss']
+  styleUrls: ['./packs.component.scss'],
 })
 export class PacksComponent implements OnInit {
-  datos: any 
+  @Input() packs: GenericNumber[] | undefined;
 
-  constructor(private landingService: LandingService) { }
+  constructor() {}
 
-  ngOnInit(){
-      this.landingService.getPackages().then(data => {
-        this.datos = data;
-      });
-  }
+  ngOnInit() {}
 }

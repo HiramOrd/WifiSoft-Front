@@ -6,6 +6,6 @@ export interface GenericText {
 
 export interface GenericNumber {
   title: string;
-  content: number;
+  price: number;
   image: string;
 }
