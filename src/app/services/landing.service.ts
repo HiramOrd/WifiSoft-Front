@@ -14,4 +14,16 @@ export class LandingService {
     const observable = this.http.get<GenericText>(API.SERVER + API.HEADER);
     return await firstValueFrom(observable);
   }
+  
+  async getPackages(): Promise<GenericText> {
+    //TODO: Asi es como el backend tiene la llamada
+    const observable = this.http.get<GenericText>(API.SERVER);
+    //TODO: Asi es como deberia quedar
+    //const observable = this.http.get<GenericText>(API.SERVER + API.PACKAGES);
+    return await firstValueFrom(observable);
+  }
+  async getAbout(): Promise<GenericText> {
+    const observable = this.http.get<GenericText>(API.SERVER + API.ABOUT);
+    return await firstValueFrom(observable);
+  }
 }

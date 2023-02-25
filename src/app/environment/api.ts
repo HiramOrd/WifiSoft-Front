@@ -3,4 +3,6 @@ export class API {
 
   // LANDING
   static HEADER = 'header';
+  static PACKAGES = 'packs';
+  static ABOUT = 'about';
 }
