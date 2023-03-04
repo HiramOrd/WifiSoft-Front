@@ -3,6 +3,10 @@
     --secondary-color: #efefef;
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
 body::-webkit-scrollbar {
     width: 7px;
     /* width of the entire scrollbar */
